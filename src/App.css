@@ -1,3 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 .App {
    text-align: center;
+}
+
+.prueba {
+   background-image: url(./assets/JesseTheWise_impact_background_image_about_rick_and_morty_witho_523ac311-a2e5-49b1-92c8-019d16c8cff6\ \(1\)\ 1.png);
+   height: 579px;
+
+}
+
+
+.firstLi {
+
+   list-style: none;
+   text-decoration: none;
+}
+
+.li {
+   list-style: none;
+
+
+}
+
+.litext {
+
+   text-decoration: none;
+   color: white;
+   font-family: 'Montserrat', normal;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 133.9%;
+   letter-spacing: 0.08em;
+}
+
+.ul {
+   display: flex;
+   gap: 30px;
+   padding: 40px;
+}
+
+.nav {
+   margin-top: -16px;
+}
+
+.header {
+   font-family: 'Magilio';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 88px;
+   line-height: 84px;
+   margin-left: 40px;
+   color: #FFFFFF;
+   margin-top: -10px;
+}
+
+.p {
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 144.9%;
+   letter-spacing: 0.205em;
+   color: #FFFFFF;
+   width: 40%;
+   margin-left: 40px;
+   margin-top: -52px;
+   position: absolute;
+}
+
+
+.jesseimg {
+
+
+   width: 36.99%;
+   position: absolute;
+
+}
+
+.rectangulo {
+
+   width: 826px;
+   position: absolute;
+   margin-left: 32.6%;
+   margin-top: -3%;
+}
+
+.ParrafoAbout {
+
+   position: absolute;
+   width: 923px;
+   height: 102px;
+   left: 489px;
+   top: 97px;
+   font-family: 'Magilio';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 46px;
+   line-height: 51px;
+   letter-spacing: 0.08em;
+   color: #FFFFFF;
+
+}
+
+.idioma {
+
+
+   position: absolute;
+   width: 335px;
+   left: 499px;
+   top: 240px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 133.9%;
+   letter-spacing: 0.08em;
+   color: #FFFFFF;
+}
+
+
+.idiomap {
+
+
+   position: absolute;
+   width: 342px;
+   left: 499px;
+   top: 329px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 144.9%;
+   letter-spacing: 0.085em;
+   color: #FFFFFF;
+
+}
+
+.aboutinfo {
+   display: flex;
+}
+
+.tech {
+
+   position: absolute;
+   width: 311px;
+   height: 32px;
+   left: 892px;
+   top: 240px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 133.9%;
+   letter-spacing: 0.08em;
+   color: #FFFFFF;
+
+
+}
+
+.techp {
+
+
+   position: absolute;
+   width: 309px;
+   left: 892px;
+   top: 326px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 144.9%;
+   letter-spacing: 0.085em;
+   color: #FFFFFF;
+}
+
+.socialicons {
+   position: absolute;
+   width: 197.01px;
+   left: 941px;
+   top: 508px;
+}
+
+.iconos {
+
+   display: flex;
+   position: absolute;
+   left: 870px;
+   top: 500px;
+   gap: 17px;
+}
+
+.boton1 {
+
+   
+   position: absolute;
+   width: 146px;
+   height: 61px;
+   left: 40px;
+   top: 437px;
+   border: none;
+   background: #F14B55;
+   border-radius: 90px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 23px;
+   line-height: 132.9%;
+   letter-spacing: 0.04em;
+   color: #FFFFFF;
+
 }

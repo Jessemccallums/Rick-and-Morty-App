@@ -43,7 +43,9 @@ export default function Card(props) {
          <TextCenter>{props.name}</TextCenter>
          <TextCenter>{props.species}</TextCenter>
          <TextCenter>{props.gender}</TextCenter>
-         <img className={styles.imagen}  src={props.image} alt="" />
+         <div>
+         <img className={styles.imagen}  src={props.image} alt="" width="150px"/>
+         </div>
       </DivCards>
    );
 }
