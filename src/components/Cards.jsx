@@ -16,15 +16,16 @@ margin-right: 10%;
 `;
 
 
-export default function Cards(props) {
-   const { characters } = props;
-  
+export default function Cards({characters, onClose}) {
+
+   
    return(
       
-     <DivCards>
-      {characters.map((el) => {
-         return <SmallDiv><Card  name={el.name} species={el.species}
-         gender={el.gender} image={el.image} onClose={() => window.alert('Emulamos que se cierra la card')}/>
+      <DivCards>
+      {characters.map(({id, name, species, gender, image}) => {
+        
+         return <SmallDiv><Card id={id}  name={name} species={species}
+         gender={gender} image={image} onClose={onClose}/>
      </SmallDiv> })}
    </DivCards>
    )

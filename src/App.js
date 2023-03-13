@@ -9,6 +9,8 @@ import { Fragment } from 'react'
 import AppCards from './view/AppCards'
 import Prueba from './view/prueba'
 import About from './view/About'
+import Detail from './view/Detail'
+
 
 
 
@@ -43,6 +45,7 @@ function App() {
 
         <Route path='/about' element={<About />} />
         <Route path='/app' element={<AppCards />} />
+        <Route path="/detail/:id" element={<Detail />} />
 
         
         </Routes>

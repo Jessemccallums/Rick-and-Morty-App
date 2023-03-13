@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import styles from './Card.module.css'
+import { Link } from 'react-router-dom';
 
 const DivCards = styled.div`
  border: 5px;
@@ -16,7 +17,7 @@ padding-top: 10px;
 
 
 
-const Equis = styled.div`
+const Equis = styled.button`
 text-align: center;
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 font-family: 'Uncial Antiqua', cursive;
@@ -36,15 +37,19 @@ justify-items: center;
 
 
 
-export default function Card(props) {
+export default function Card({ id, name, species, gender, image, onClose }) {
+   console.log(id)
    return (
       <DivCards>
-         <Equis onClick={props.onClose}>X</Equis>
-         <TextCenter>{props.name}</TextCenter>
-         <TextCenter>{props.species}</TextCenter>
-         <TextCenter>{props.gender}</TextCenter>
+         <button onClick={() => onClose(id)}>X</button>
+        
+         <Link to={`/detail/${id}`}>
+         <TextCenter>{name}</TextCenter>
+         </Link>
+         <TextCenter>{species}</TextCenter>
+         <TextCenter>{gender}</TextCenter>
          <div>
-         <img className={styles.imagen}  src={props.image} alt="" width="150px"/>
+         <img className={styles.imagen}  src={image} alt="" width="150px"/>
          </div>
       </DivCards>
    );

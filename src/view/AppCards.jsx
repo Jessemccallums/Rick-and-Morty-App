@@ -3,8 +3,9 @@ import '../App.css'
 import Card from '../components/Card.jsx'
 import Cards from '../components/Cards.jsx'
 import SearchBar from '../components/SearchBar.jsx'
-import characters from '../data.js'
+
 import styled from 'styled-components'
+import { useState } from 'react'
 
 
 const BigDiv = styled.div`
@@ -27,18 +28,46 @@ width: 25.3%;
 `;
 
 export default function AppCards() {
+  const onSearch = (id) => {
+    const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    const KEY = "0b40e782ebfe.49a271440e3a47d5b434"
+
+    if (characters.find((char) => char.id === id)) {
+      return alert("Personaje repetido");
+    }
+
+    fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.name) {
+          setCharacters([...characters, data]);
+          console.log(setCharacters([...characters, data]))
+        } else {
+          alert("Algo salió mal");
+        }
+      });
+
+  }
+
+  const onClose = (id) => {
+    setCharacters(characters.filter((char) => char.id !== id))
+  }
+
+  const [characters, setCharacters] = useState([])
+
   return (
     <BigDiv >
       
       <div>
         <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
+          onSearch={onSearch}
         />
       </div>
         <hr />
       <div >
         <Cards
           characters={characters}
+          onClose={onClose}
         />
       </div>
     </BigDiv>
