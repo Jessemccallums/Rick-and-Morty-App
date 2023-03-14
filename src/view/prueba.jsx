@@ -5,6 +5,7 @@ import '../App.css'
 
 export default function Prueba() {
   return (
+    
     <div className='headerimg'>
       <h2 className='header'>Rick and<br/> Morty</h2>
       <p className='p'>Rick and Morty is an American adult animated science-fiction sitcom 

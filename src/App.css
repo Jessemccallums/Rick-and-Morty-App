@@ -46,6 +46,7 @@
 }
 
 .header {
+
    font-family: 'Magilio';
    font-style: normal;
    font-weight: 400;
@@ -53,7 +54,7 @@
    line-height: 84px;
    margin-left: 40px;
    color: #FFFFFF;
-   margin-top: -10px;
+   margin-top: -465px;
 }
 
 .p {
@@ -77,6 +78,7 @@
 
    width: 36.99%;
    position: absolute;
+   margin-top: -451px;
 
 }
 
@@ -85,7 +87,7 @@
    width: 826px;
    position: absolute;
    margin-left: 32.6%;
-   margin-top: -3%;
+   margin-top: -485px;
 }
 
 .ParrafoAbout {
@@ -195,7 +197,7 @@
 
 .boton1 {
 
-   
+
    position: absolute;
    width: 146px;
    height: 61px;
@@ -212,4 +214,94 @@
    letter-spacing: 0.04em;
    color: #FFFFFF;
 
+}
+
+.detailcss {
+   display: flex;
+   margin-top: -490px;
+}
+
+.formulario {
+  
+   display: flex;
+   flex-direction: column;
+   width: 22%;
+   margin: auto;
+   background-color: #0F1219;
+   color: white;
+   padding: 10px 100px 67px 100px;
+   border-radius: 64px;
+}
+
+
+.cajalogin {
+   padding-top: 60px;
+}
+
+.botonlogin {
+   background: #4D5162;
+   border-radius: 13px;
+   width: 44%;
+   padding: 12px;
+   border: none;
+   margin-top: 22px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 21px;
+   line-height: 133.9%;
+   /* or 28px */
+
+   letter-spacing: 0.08em;
+
+   color: #FFFFFF;
+}
+
+#username {
+   background: #FFFFFF;
+   border-radius: 89px;
+   border: none;
+   padding: 6px;
+   margin-top: 13px;
+}
+
+#password {
+   background: #FFFFFF;
+   border-radius: 89px;
+   border: none;
+   padding: 6px;
+   margin-top: 13px;
+}
+
+.label {
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 21px;
+   line-height: 133.9%;
+   letter-spacing: 0.08em;
+   color: #FFFFFF;
+   margin-top: 10px;
+}
+
+.logintitle {
+
+   font-family: 'Magilio';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 54px;
+   line-height: 59px;
+   letter-spacing: 0.08em;
+
+   color: #FFFFFF;
+}
+
+.spanerror{
+   color: red;
+}
+
+.linktitulo{
+   text-decoration: none
 }

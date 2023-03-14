@@ -3,15 +3,22 @@ import styled from 'styled-components'
 import './main.css'
 
 const DivCards = styled.div`
+
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+-webkit-box-align: center;
 align-items: center;
+height: 90%;
+width: 272%;
+border: 1px solid rgb(221, 221, 221);
+background: rgb(241, 241, 241);
+overflow-y: scroll;
+margin-left: -312px;
 
 `;
 const SmallDiv = styled.div`
-margin-left: 10%;
-margin-right: 10%;
+margin-left: 5%;
 
 `;
 

@@ -1,57 +1,61 @@
 import './App.css'
-import Card from './components/Card.jsx'
-import Cards from './components/Cards.jsx'
-import SearchBar from './components/SearchBar.jsx'
-import characters, { Rick } from './data.js'
-import styled from 'styled-components'
-import { Switch, Route, Link, Routes } from 'react-router-dom'
-import { Fragment } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import ShowApp from './view/showApp'
+import Form from './components/Form'
+import { useNavigate } from 'react-router-dom'
 import AppCards from './view/AppCards'
 import Prueba from './view/prueba'
 import About from './view/About'
 import Detail from './view/Detail'
+import Aplication from './components/Aplication'
 
 
 
 
 function App() {
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const username = 'jesse@gmail.com';
+  const password = 'jesse123';
+
+
+  function login(userData) {
+    if (userData.password === password && userData.username === username) {
+      setAccess(true);
+      navigate('/home');
+    }
+  }
+  useEffect(() => {
+    !access && navigate('/');
+  }, [access]);
+
+
+  const { pathname } = useLocation()
+
+
   return (
-    
-   <div className='prueba'>
-    <nav className='nav'>
-    <ul className='ul'>
-      <li className='firstLi'>
-        <Link to="/" className='litext'>Home</Link>
-      </li>
-      <li className='li'>
-        <Link to="/about" className='litext'>About</Link>
-      </li>
-      <li className='li'>
-        <Link to="/app" className='litext'>App</Link>
-      </li>
-      <li className='li'>
-        <Link to="/login" className='litext'>Login</Link>
-      </li>
-    </ul>
-    </nav>
-    
+
+    <div className='prueba'>
+
+      
+    {
+      pathname !== '/' && <Aplication />
+    }
+     
+      
+
       <section>
         <Routes>
-        <Route path='/' element={<Prueba />} className="headerimg"/>
-
-     
-        
-        
-
-        <Route path='/about' element={<About />} />
-        <Route path='/app' element={<AppCards />} />
-        <Route path="/detail/:id" element={<Detail />} />
-
-        
+          <Route path='/' element={<Form login={login} />} />
+          <Route path='/home' element={<Prueba />} className="headerimg" />
+          <Route path='/about' element={<About />} />
+          <Route path='/app' element={<AppCards />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
-        </section>
-  
-   </div>
+      </section>
+
+    </div>
 
   )
 }

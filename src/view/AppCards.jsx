@@ -10,13 +10,14 @@ import { useState } from 'react'
 
 const BigDiv = styled.div`
 
+
 margin: auto;
 display: flex;
 -webkit-box-pack: center;
 justify-content: center;
 flex-direction: column;
 width: 26.3%;
-padding: 44px;
+margin-top: -500px;
 `;
 
 const SecondDiv = styled.div`

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import '../App.css'
 
 export default function Detail() {
 
@@ -21,14 +22,15 @@ export default function Detail() {
   }
   console.log(detail)
   return (
-    <div>
-         
-      <h1>{detail.name}</h1>
-      <h2>{detail.status}</h2>
-      <h2>{detail.species}</h2>
-      <h2>{detail.origin?.name}</h2>
+    <div className='detailcss'>
       <div>
-      <img src={detail.image} alt="" />
+        <h1>{detail.name}</h1>
+        <h2>{detail.status}</h2>
+        <h2>{detail.species}</h2>
+        <h2>{detail.origin?.name}</h2>
+      </div> 
+      <div>
+        <img src={detail.image} alt="" />
       </div>
 
     </div>
