@@ -75,19 +75,20 @@
 
 .jesseimg {
 
-
    width: 36.99%;
    position: absolute;
-   margin-top: -451px;
+   margin-top: -465px;
+
 
 }
 
 .rectangulo {
 
-   width: 826px;
+   
+   width: 849px;
    position: absolute;
-   margin-left: 32.6%;
-   margin-top: -485px;
+   margin-left: 33.6%;
+   margin-top: -493px;
 }
 
 .ParrafoAbout {
@@ -227,10 +228,10 @@
    flex-direction: column;
    width: 22%;
    margin: auto;
-   background-color: #0F1219;
+   background-color: #0f121978;
    color: white;
    padding: 10px 100px 67px 100px;
-   border-radius: 64px;
+   border-radius: 30px;
 }
 
 

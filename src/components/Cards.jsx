@@ -5,20 +5,16 @@ import './main.css'
 const DivCards = styled.div`
 
 display: flex;
-flex-direction: row;
+flex-wrap: wrap;
 justify-content: space-around;
--webkit-box-align: center;
 align-items: center;
-height: 90%;
-width: 272%;
-border: 1px solid rgb(221, 221, 221);
-background: rgb(241, 241, 241);
-overflow-y: scroll;
-margin-left: -312px;
+height: auto;
+width: 90%;
 
 `;
 const SmallDiv = styled.div`
-margin-left: 5%;
+width: 100%;
+display:flex;
 
 `;
 
@@ -31,9 +27,9 @@ export default function Cards({characters, onClose}) {
       <DivCards>
       {characters.map(({id, name, species, gender, image}) => {
         
-         return <SmallDiv><Card id={id}  name={name} species={species}
+         return <Card id={id}  name={name} species={species}
          gender={gender} image={image} onClose={onClose}/>
-     </SmallDiv> })}
+      })}
    </DivCards>
    )
 }
