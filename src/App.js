@@ -9,6 +9,7 @@ import Prueba from './view/prueba'
 import About from './view/About'
 import Detail from './view/Detail'
 import Aplication from './components/Aplication'
+import Favorites from './components/Favorites'
 
 
 
@@ -52,6 +53,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/app' element={<AppCards />} />
           <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </section>
 

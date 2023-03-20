@@ -3,7 +3,7 @@ import '../App.css'
 import Card from '../components/Card.jsx'
 import Cards from '../components/Cards.jsx'
 import SearchBar from '../components/SearchBar.jsx'
-
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useState } from 'react'
 
@@ -63,7 +63,7 @@ export default function AppCards() {
         <SearchBar
           onSearch={onSearch}
         />
-      </div>
+      </div>  
         <hr />
       <div >
         <Cards
@@ -71,6 +71,7 @@ export default function AppCards() {
           onClose={onClose}
         />
       </div>
+    
     </BigDiv>
   )
 }

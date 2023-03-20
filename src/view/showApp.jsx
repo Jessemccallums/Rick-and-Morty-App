@@ -20,6 +20,9 @@ function ShowApp() {
       <li className='li'>
         <Link to="/app" className='litext'>App</Link>
       </li>
+      <li className='li'>
+        <Link to="/favorites" className='litext'>Favorites</Link>
+      </li>
       
     </ul>
     </nav>
