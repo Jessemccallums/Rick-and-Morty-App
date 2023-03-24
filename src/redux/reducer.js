@@ -3,6 +3,7 @@ import { ADD_FAVORITE, REMOVE_FAVORITE, FILTER, ORDER, ALL_FAVORITE } from "./ac
 const initialState = {
     myFavorites: [],
     allCharacters: [],
+    filter: 'All'
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -23,7 +24,7 @@ const rootReducer = (state = initialState, action) => {
             return { ...state, myFavorites: state.myFavorites.filter((char) => char.id !== action.payload) }
         // case FILTER:
         //     const { allCharacters } = state
-        //     return { ...state, allCharacters: state.myFavorites.filter((char) => char.gender !== action.payload) }
+        //     return { allCharacters: infiltracion(action.payload, state.myFavorites) }
 
         case ORDER:
           
@@ -44,5 +45,34 @@ const ordenardata = (tipo, array) => {
         return result
 
     }
+}
+
+const infiltracion = (tipo, array) => {
+if(tipo !== 'All'){
+    if(tipo === 'Male'){
+    let result = array.filter((char) => char.gender === tipo)
+    
+    return result
+
+    }
+    
+    if(tipo === 'Female'){
+    let result = array.filter((char) => char.gender === tipo)
+    
+    return result
+    }
+    
+    if(tipo === 'Genderless'){
+        let result = array.filter((char) => char.gender === tipo)
+    
+        return result
+
+    }
+    if(tipo === 'Unknown'){
+        let result = array.filter((char) => char.gender === tipo)
+    
+        return result
+    }
+}
 }
 export default rootReducer

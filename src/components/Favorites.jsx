@@ -5,29 +5,69 @@ import Card from './Card'
 
 export default function Favorites() {
   const favorites = useSelector(state => state.myFavorites);
+  const personajes = useSelector(state => state.allCharacters);
 
   const [orderCard, setOrderCard] = useState();
+  const [orderCardGender, setOrderCardGender] = useState();
 
   const dispatch = useDispatch();
   
   const handleChangeOrder = (event) => {
     const valor = event.target.value
+   
     if(valor === "Ascendente"){
-      
-      setOrderCard("Descendente");
-    } else {
-      
+      let result = personajes.sort((a,b) => {return a.id - b.id})
       setOrderCard("Ascendente");
+      return result
+    } else{
+      let result = personajes.sort((a,b) => {return b.id - a.id})
+      setOrderCard("Descendente");
+      return result
     }
+      
+    
   }
-
+  
+  
+  const handleChangerGender = (event) => {
+    const valor = event.target.value
+    if(valor !== 'All'){
+    if(valor === 'Male'){
+     
+      setOrderCardGender('Male')
+      
+    }
+    if(valor === 'Female'){
+      
+      setOrderCardGender('Female')
+    
+    }
+    if(valor === 'Genderless'){
+     
+      setOrderCardGender('Genderless')
+    
+    }
+    if(valor === 'Unknown'){
+     
+    
+      setOrderCardGender('Unknown')
+     
+    }
+    }
+    
+  }
   useEffect(() => {
     dispatch(allFavorites())
     dispatch(orderCards(orderCard))
   }, [orderCard])
+
+  useEffect(() => {
+    dispatch(filterCards(orderCardGender))
+  }, [orderCardGender])
+ 
  
 
-
+  const personajesFiltrados = personajes.filter((char) => char.gender === orderCardGender) 
 
 
 
@@ -35,11 +75,13 @@ export default function Favorites() {
     <div>
 
       <select name="" id="" onChange={handleChangeOrder}>
+        <option value="All">All</option>
         <option value="Ascendente">Ascendente</option>
         <option value="Descendente">Descendente</option>
 
       </select>
-      <select name="name" id="name" >
+      <select name="name" id="name" onChange={handleChangerGender}>
+        <option value="All">All</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Genderless">Genderless</option>
@@ -47,7 +89,7 @@ export default function Favorites() {
 
       </select>
       {
-        favorites.map(({ id, name, species, gender, image }) => {
+        personajesFiltrados.map(({ id, name, species, gender, image }) => {
           return <Card key={id} id={id} name={name} species={species}
             gender={gender} image={image} />
         })
