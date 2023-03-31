@@ -30,14 +30,15 @@ width: 25.3%;
 
 export default function AppCards() {
   const onSearch = (id) => {
-    const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    const KEY = "0b40e782ebfe.49a271440e3a47d5b434"
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    // const KEY = "0b40e782ebfe.49a271440e3a47d5b434"
 
     if (characters.find((char) => char.id === id)) {
       return alert("Personaje repetido");
     }
+    const URL = "http://localhost:3001"
 
-    fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+    fetch(`${URL}/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {

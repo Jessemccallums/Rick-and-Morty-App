@@ -8,16 +8,16 @@ export default function Detail() {
   const {id} = useParams()
 
 
-  const [detail, setId] = useState("")
+  const [detail, setId] = useState([])
 
   useEffect(() => {
     info()
   })
 
   const info = async () => {
-  const URL_BASE = "https://be-a-rym.up.railway.app/api";
-  const KEY = "0b40e782ebfe.49a271440e3a47d5b434";
-  const {data} = await axios(`${URL_BASE}/character/${id}?key=${KEY}`)
+  // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+  // const KEY = "0b40e782ebfe.49a271440e3a47d5b434";
+  const {data} = await axios(`http://localhost:3001/rickandmorty/detail/${id}`)
       setId(data)
   }
   console.log(detail)
